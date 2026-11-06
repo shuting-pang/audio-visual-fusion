@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1150" viewBox="0 0 1440 1150" role="img"><title>Audio-visual fusion: transcript filtering and missing-feature handling</title><rect width="100%" height="100%" fill="white"/>
+<text x="60" y="57" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="39" font-weight="700" fill="#183447">Audio-Visual Fusion with Missing Modalities</text>
+<text x="60" y="111" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#516779">Filter-and-Concat: filter unreliable text, retain available features, then fuse.</text>
+<rect x="60" y="170" width="400" height="100" rx="16" fill="#f4f7fa" stroke="#a6bac8" stroke-width="2"/>
+<text x="260" y="205" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183447">AUDIO</text>
+<text x="260" y="242" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#516779">Interview recording</text>
+<rect x="520" y="170" width="400" height="100" rx="16" fill="#f4f7fa" stroke="#a6bac8" stroke-width="2"/>
+<text x="720" y="205" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183447">VIDEO</text>
+<text x="720" y="242" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#516779">Interview frames</text>
+<rect x="980" y="170" width="400" height="100" rx="16" fill="#f4f7fa" stroke="#a6bac8" stroke-width="2"/>
+<text x="1180" y="205" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183447">TEXT FROM AUDIO</text>
+<text x="1180" y="242" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#516779">Whisper + question-aware prompt</text>
+<polyline points="260,270 260,330" fill="none" stroke="#a6bac8" stroke-width="3"/>
+<polygon points="260,330 254.345448056554,318.2941876694152 265.654551943446,318.2941876694152" fill="#a6bac8"/>
+<polyline points="720,270 720,330" fill="none" stroke="#a6bac8" stroke-width="3"/>
+<polygon points="720,330 714.345448056554,318.2941876694152 725.654551943446,318.2941876694152" fill="#a6bac8"/>
+<polyline points="1180,270 1180,320" fill="none" stroke="#a6bac8" stroke-width="3"/>
+<polygon points="1180,320 1174.345448056554,308.2941876694152 1185.654551943446,308.2941876694152" fill="#a6bac8"/>
+<rect x="60" y="330" width="400" height="125" rx="16" fill="#edf7f8" stroke="#a6bac8" stroke-width="2"/>
+<text x="260" y="365" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#183447">wav2vec audio features</text>
+<text x="260" y="408" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Pool / align sequence features</text>
+<rect x="520" y="330" width="400" height="125" rx="16" fill="#edf7f8" stroke="#a6bac8" stroke-width="2"/>
+<text x="720" y="365" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#183447">FaceNet face crop</text>
+<text x="720" y="408" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#516779">CLIP video features</text>
+<rect x="980" y="320" width="400" height="180" rx="16" fill="#fff8eb" stroke="#dab771" stroke-width="2"/>
+<text x="1180" y="350" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#183447">TRANSCRIPT FILTER</text>
+<text x="1000" y="395" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#183447">Empty / too long / blacklist?</text>
+<text x="1000" y="430" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#183447">Low or unavailable confidence?</text>
+<text x="1000" y="465" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Keep only answers that pass</text>
+<polyline points="260,455 260,530" fill="none" stroke="#a6bac8" stroke-width="3"/>
+<polygon points="260,530 254.345448056554,518.2941876694152 265.654551943446,518.2941876694152" fill="#a6bac8"/>
+<polyline points="720,455 720,530" fill="none" stroke="#a6bac8" stroke-width="3"/>
+<polygon points="720,530 714.345448056554,518.2941876694152 725.654551943446,518.2941876694152" fill="#a6bac8"/>
+<rect x="60" y="530" width="400" height="105" rx="16" fill="#f4f7fa" stroke="#a6bac8" stroke-width="2"/>
+<text x="260" y="560" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183447">Retain available audio</text>
+<text x="260" y="603" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">even when video / text is absent</text>
+<rect x="520" y="530" width="400" height="105" rx="16" fill="#fff3e4" stroke="#dab771" stroke-width="2"/>
+<text x="720" y="560" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183447">Failed face detection?</text>
+<text x="720" y="603" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#516779">Mark video as missing</text>
+<polyline points="1180,500 1180,523 1075,523 1075,550" fill="none" stroke="#087f8c" stroke-width="3"/>
+<polygon points="1075,550 1069.345448056554,538.2941876694152 1080.654551943446,538.2941876694152" fill="#087f8c"/>
+<polyline points="1180,523 1285,523 1285,550" fill="none" stroke="#bd8240" stroke-width="3"/>
+<polygon points="1285,550 1279.345448056554,538.2941876694152 1290.654551943446,538.2941876694152" fill="#bd8240"/>
+<rect x="980" y="550" width="190" height="115" rx="16" fill="#e9f5ee" stroke="#82b49a" stroke-width="2"/>
+<text x="1075" y="579" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183447">Accepted</text>
+<text x="1075" y="620" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#516779">CLIP text</text>
+<text x="1075" y="649" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#516779">encoding</text>
+<rect x="1190" y="550" width="190" height="115" rx="16" fill="#fff3e4" stroke="#dab771" stroke-width="2"/>
+<text x="1285" y="579" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183447">Rejected</text>
+<text x="1285" y="620" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#516779">Empty text</text>
+<text x="1285" y="649" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#516779">missing = 1</text>
+<polyline points="260,635 260,710" fill="none" stroke="#a6bac8" stroke-width="3"/>
+<polygon points="260,710 254.345448056554,698.2941876694152 265.654551943446,698.2941876694152" fill="#a6bac8"/>
+<polyline points="720,635 720,710" fill="none" stroke="#a6bac8" stroke-width="3"/>
+<polygon points="720,710 714.345448056554,698.2941876694152 725.654551943446,698.2941876694152" fill="#a6bac8"/>
+<polyline points="1075,665 1075,710" fill="none" stroke="#a6bac8" stroke-width="3"/>
+<polygon points="1075,710 1069.345448056554,698.2941876694152 1080.654551943446,698.2941876694152" fill="#a6bac8"/>
+<polyline points="1285,665 1285,710" fill="none" stroke="#a6bac8" stroke-width="3"/>
+<polygon points="1285,710 1279.345448056554,698.2941876694152 1290.654551943446,698.2941876694152" fill="#a6bac8"/>
+<rect x="60" y="710" width="1320" height="100" rx="16" fill="#e7f2f7" stroke="#83adbf" stroke-width="2"/>
+<text x="720" y="745" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#183447">Keep explicit missing flags; zero-fill absent feature blocks</text>
+<text x="720" y="785" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#516779">1 = missing, 0 = present. Each available modality stays in the sample.</text>
+<polyline points="720,810 720,860" fill="none" stroke="#087f8c" stroke-width="3"/>
+<polygon points="720,860 714.345448056554,848.2941876694152 725.654551943446,848.2941876694152" fill="#087f8c"/>
+<rect x="60" y="860" width="1320" height="95" rx="16" fill="#edf7f8" stroke="#087f8c" stroke-width="2"/>
+<text x="720" y="892" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#087f8c">CONCATENATE</text>
+<text x="720" y="930" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#183447">[ audio | video | text | missing_A | missing_V | missing_T ]</text>
+<polyline points="720,955 720,1000" fill="none" stroke="#087f8c" stroke-width="3"/>
+<polygon points="720,1000 714.345448056554,988.2941876694152 725.654551943446,988.2941876694152" fill="#087f8c"/>
+<rect x="470" y="1000" width="500" height="85" rx="16" fill="#087f8c" stroke="#087f8c" stroke-width="2"/>
+<text x="720" y="1042" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="white">MLP  →  Binary prediction</text>
+<text x="60" y="1120" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Workflow from experiment notes; feature-level reference implementation provided.</text>
+</svg>

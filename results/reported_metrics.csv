@@ -1,0 +1,5 @@
+modality,auc_percent,accuracy_percent,f1_percent
+Audio,60.10,74.34,48.72
+Video,59.18,74.70,51.31
+Text,60.16,81.28,44.83
+Filter-and-Concat (A/V/T),60.97,74.44,24.93
