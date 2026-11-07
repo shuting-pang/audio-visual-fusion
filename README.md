@@ -37,6 +37,20 @@ An isolated before/after-filtering AUC comparison is not available in the curren
 
 Fusion improves the recorded AUC by **0.81 percentage points over the strongest unimodal baseline (text)**. These are AUC comparisons from the existing experiment notes, rather than a new training run. See [AUC gains](results/auc_gains.csv) for the displayed values; the [original metric record](results/reported_metrics.csv) is retained separately.
 
+## 4. Multimodal fusion after cross-domain semi-supervised video training
+
+After cross-domain semi-supervised training of the **video branch**, audio and video features are combined for multimodal prediction. **Table 3** reports the following results on the **clinical cohort with five-fold cross-validation** (mean ± standard deviation, %).
+
+| Modality | AUC (%) | ACC (%) | SEN (%) | SPE (%) | F1 (%) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Video* | 79.14 ± 5.56 | 70.42 ± 5.78 | 74.26 ± 8.32 | 66.04 ± 16.05 | 73.47 ± 4.21 |
+| Audio | 76.68 ± 2.35 | 69.39 ± 2.93 | **76.51 ± 8.21** | 60.54 ± 4.86 | 73.16 ± 4.07 |
+| **Multimodal (audio + video)** | **84.10 ± 5.11** | **75.46 ± 5.06** | 74.69 ± 13.94 | **76.48 ± 12.58** | **76.44 ± 6.64** |
+
+Audio–video fusion reaches **84.10% mean AUC**, an increase of **4.96 percentage points over video** and **7.42 percentage points over audio** within this experiment.
+
+`Video*` preserves the configuration marker used in the original table. These results are transcribed from Table 3 of the experiment slide and are reported separately from the earlier A/V/T comparison in Section 3. See [Table 3 data](results/cross_domain_ssl_table3.csv).
+
 ## Code
 
 ```text

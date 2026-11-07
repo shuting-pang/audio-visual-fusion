@@ -1,0 +1,4 @@
+modality,auc_mean_percent,auc_sd_percent,accuracy_mean_percent,accuracy_sd_percent,sensitivity_mean_percent,sensitivity_sd_percent,specificity_mean_percent,specificity_sd_percent,f1_mean_percent,f1_sd_percent
+Video*,79.14,5.56,70.42,5.78,74.26,8.32,66.04,16.05,73.47,4.21
+Audio,76.68,2.35,69.39,2.93,76.51,8.21,60.54,4.86,73.16,4.07
+Multimodal (audio + video),84.10,5.11,75.46,5.06,74.69,13.94,76.48,12.58,76.44,6.64
