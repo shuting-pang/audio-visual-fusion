@@ -49,7 +49,7 @@ class Figure:
 def workflow():
     f = Figure(1440, 1150, "Audio-visual fusion: transcript filtering and missing-feature handling")
     f.text(60, 57, "Audio-Visual Fusion with Missing Modalities", 39, bold=True)
-    f.text(60, 111, "Filter-and-Concat: filter unreliable text, retain available features, then fuse.", 25, MUTED)
+    f.text(60, 111, "ASR filtering + Mask-Aware Concatenation", 25, MUTED)
     for x, title, subtitle in [(60, "AUDIO", "Interview recording"), (520, "VIDEO", "Interview frames"), (980, "TEXT FROM AUDIO", "Whisper + question-aware prompt")]:
         f.box(x, 170, 400, 100, fill="#f4f7fa")
         f.text(x+200, 205, title, 24, bold=True, center=True)
@@ -74,8 +74,9 @@ def workflow():
     f.text(260,560,"Retain available audio",24,bold=True,center=True)
     f.text(260,603,"even when video / text is absent",21,MUTED,center=True)
     f.box(520,530,400,105,fill=ORANGE,stroke="#dab771")
-    f.text(720,560,"Failed face detection?",24,bold=True,center=True)
-    f.text(720,603,"Mark video as missing",22,MUTED,center=True)
+    f.text(720,554,"Video validity mask",24,bold=True,center=True)
+    f.text(720,587,"Pool valid frames / patches",21,MUTED,center=True)
+    f.text(720,618,"No valid input: mark as missing",18,MUTED,center=True)
     f.arrow([(1180,500),(1180,523),(1075,523),(1075,550)],color=TEAL)
     f.arrow([(1180,523),(1285,523),(1285,550)],color="#bd8240")
     f.box(980,550,190,115,fill="#e9f5ee",stroke="#82b49a")
@@ -91,7 +92,7 @@ def workflow():
     f.text(720,785,"1 = missing, 0 = present. Each available modality stays in the sample.",23,MUTED,center=True)
     f.arrow([(720,810),(720,860)],color=TEAL)
     f.box(60,860,1320,95,fill=SOFT,stroke=TEAL)
-    f.text(720,892,"CONCATENATE",25,color=TEAL,bold=True,center=True)
+    f.text(720,892,"MASK-AWARE CONCATENATION",25,color=TEAL,bold=True,center=True)
     f.text(720,930,"[ audio | video | text | missing_A | missing_V | missing_T ]",26,center=True)
     f.arrow([(720,955),(720,1000)],color=TEAL)
     f.box(470,1000,500,85,fill=TEAL,stroke=TEAL)
@@ -102,25 +103,21 @@ def workflow():
 
 def results():
     rows = list(csv.DictReader((ROOT/"results/reported_metrics.csv").open()))
-    f = Figure(1440, 730, "Reported unimodal and multimodal comparison: AUC, accuracy and F1")
-    f.text(60,55,"Multimodal versus unimodal results",39,bold=True)
-    f.text(60,108,"Reported experiment • observed missingness • values in percent",25,MUTED)
-    metrics=[("AUC","auc_percent"),("Accuracy","accuracy_percent"),("F1","f1_percent")]
-    labels=["Audio","Video","Text","Filter-and-Concat"]
-    for col,(title,key) in enumerate(metrics):
+    fusion = float(rows[-1]["auc_percent"])
+    f = Figure(1440, 590, "AUC gains from unimodal baselines to multimodal fusion")
+    f.text(60,55,"From unimodal to multimodal fusion",39,bold=True)
+    f.text(60,111,"AUC only | Audio + video + text | Existing experiment results",25,MUTED)
+    for col, row in enumerate(rows[:3]):
         x=60+col*470
-        f.text(x,175,title,30,bold=True)
-        for i,row in enumerate(rows):
-            y=230+i*95
-            value=float(row[key]);is_fusion=i==3
-            f.text(x,y,labels[i],21,color=TEAL if is_fusion else MUTED,bold=is_fusion)
-            f.box(x,y+22,340,22,fill="#edf1f4",stroke="#edf1f4")
-            f.box(x,y+22,340*value/100,22,fill=TEAL if is_fusion else "#819eaf",stroke=TEAL if is_fusion else "#819eaf")
-            f.text(x+355,y+33,f"{value:.2f}",23,color=TEAL if is_fusion else INK,bold=is_fusion)
-        f.text(x,620,"0",18,MUTED)
-        f.text(x+340,620,"100",18,MUTED,center=True)
-    f.text(60,676,"Fusion: highest recorded AUC (+0.81 pp over text); accuracy and F1 do not improve.",24,bold=True)
-    f.text(60,712,"Source: supplied experiment table. No new training run; uncertainty was not reported.",20,MUTED)
+        baseline=float(row["auc_percent"])
+        gain=fusion-baseline
+        f.box(x,175,380,290,fill="#f4f7fa",stroke=LINE)
+        f.text(x+190,219,row["modality"]+" to A/V/T",26,bold=True,center=True)
+        f.text(x+190,285,f"{baseline:.2f}%  →  {fusion:.2f}%",32,center=True)
+        f.text(x+190,342,f"+{gain:.2f} pp",40,color=TEAL,bold=True,center=True)
+        f.text(x+190,408,"AUC gain",23,MUTED,center=True)
+    f.text(60,517,"Best unimodal baseline: Text 60.16%  →  Multimodal 60.97% (+0.81 pp)",26,bold=True)
+    f.text(60,563,"pp = percentage points. Source: supplied experiment table; no new training run.",22,MUTED)
     f.save("reported-results")
 
 

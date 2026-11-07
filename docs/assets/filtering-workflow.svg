@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1150" viewBox="0 0 1440 1150" role="img"><title>Audio-visual fusion: transcript filtering and missing-feature handling</title><rect width="100%" height="100%" fill="white"/>
 <text x="60" y="57" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="39" font-weight="700" fill="#183447">Audio-Visual Fusion with Missing Modalities</text>
-<text x="60" y="111" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#516779">Filter-and-Concat: filter unreliable text, retain available features, then fuse.</text>
+<text x="60" y="111" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#516779">ASR filtering + Mask-Aware Concatenation</text>
 <rect x="60" y="170" width="400" height="100" rx="16" fill="#f4f7fa" stroke="#a6bac8" stroke-width="2"/>
 <text x="260" y="205" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183447">AUDIO</text>
 <text x="260" y="242" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#516779">Interview recording</text>
@@ -35,8 +35,9 @@
 <text x="260" y="560" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183447">Retain available audio</text>
 <text x="260" y="603" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">even when video / text is absent</text>
 <rect x="520" y="530" width="400" height="105" rx="16" fill="#fff3e4" stroke="#dab771" stroke-width="2"/>
-<text x="720" y="560" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183447">Failed face detection?</text>
-<text x="720" y="603" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#516779">Mark video as missing</text>
+<text x="720" y="554" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183447">Video validity mask</text>
+<text x="720" y="587" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Pool valid frames / patches</text>
+<text x="720" y="618" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#516779">No valid input: mark as missing</text>
 <polyline points="1180,500 1180,523 1075,523 1075,550" fill="none" stroke="#087f8c" stroke-width="3"/>
 <polygon points="1075,550 1069.345448056554,538.2941876694152 1080.654551943446,538.2941876694152" fill="#087f8c"/>
 <polyline points="1180,523 1285,523 1285,550" fill="none" stroke="#bd8240" stroke-width="3"/>
@@ -63,7 +64,7 @@
 <polyline points="720,810 720,860" fill="none" stroke="#087f8c" stroke-width="3"/>
 <polygon points="720,860 714.345448056554,848.2941876694152 725.654551943446,848.2941876694152" fill="#087f8c"/>
 <rect x="60" y="860" width="1320" height="95" rx="16" fill="#edf7f8" stroke="#087f8c" stroke-width="2"/>
-<text x="720" y="892" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#087f8c">CONCATENATE</text>
+<text x="720" y="892" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#087f8c">MASK-AWARE CONCATENATION</text>
 <text x="720" y="930" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#183447">[ audio | video | text | missing_A | missing_V | missing_T ]</text>
 <polyline points="720,955 720,1000" fill="none" stroke="#087f8c" stroke-width="3"/>
 <polygon points="720,1000 714.345448056554,988.2941876694152 725.654551943446,988.2941876694152" fill="#087f8c"/>

@@ -1,0 +1,4 @@
+unimodal_baseline,unimodal_auc_percent,multimodal_auc_percent,gain_percentage_points
+Audio,60.10,60.97,0.87
+Video,59.18,60.97,1.79
+Text,60.16,60.97,0.81

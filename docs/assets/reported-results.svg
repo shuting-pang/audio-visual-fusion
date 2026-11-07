@@ -1,63 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="730" viewBox="0 0 1440 730" role="img"><title>Reported unimodal and multimodal comparison: AUC, accuracy and F1</title><rect width="100%" height="100%" fill="white"/>
-<text x="60" y="55" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="39" font-weight="700" fill="#183447">Multimodal versus unimodal results</text>
-<text x="60" y="108" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#516779">Reported experiment • observed missingness • values in percent</text>
-<text x="60" y="175" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#183447">AUC</text>
-<text x="60" y="230" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Audio</text>
-<rect x="60" y="252" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="60" y="252" width="204.34" height="22" rx="16" fill="#819eaf" stroke="#819eaf" stroke-width="2"/>
-<text x="415" y="263" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#183447">60.10</text>
-<text x="60" y="325" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Video</text>
-<rect x="60" y="347" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="60" y="347" width="201.21200000000002" height="22" rx="16" fill="#819eaf" stroke="#819eaf" stroke-width="2"/>
-<text x="415" y="358" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#183447">59.18</text>
-<text x="60" y="420" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Text</text>
-<rect x="60" y="442" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="60" y="442" width="204.54399999999998" height="22" rx="16" fill="#819eaf" stroke="#819eaf" stroke-width="2"/>
-<text x="415" y="453" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#183447">60.16</text>
-<text x="60" y="515" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#087f8c">Filter-and-Concat</text>
-<rect x="60" y="537" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="60" y="537" width="207.298" height="22" rx="16" fill="#087f8c" stroke="#087f8c" stroke-width="2"/>
-<text x="415" y="548" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#087f8c">60.97</text>
-<text x="60" y="620" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#516779">0</text>
-<text x="400" y="620" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#516779">100</text>
-<text x="530" y="175" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#183447">Accuracy</text>
-<text x="530" y="230" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Audio</text>
-<rect x="530" y="252" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="530" y="252" width="252.75600000000003" height="22" rx="16" fill="#819eaf" stroke="#819eaf" stroke-width="2"/>
-<text x="885" y="263" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#183447">74.34</text>
-<text x="530" y="325" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Video</text>
-<rect x="530" y="347" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="530" y="347" width="253.98" height="22" rx="16" fill="#819eaf" stroke="#819eaf" stroke-width="2"/>
-<text x="885" y="358" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#183447">74.70</text>
-<text x="530" y="420" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Text</text>
-<rect x="530" y="442" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="530" y="442" width="276.35200000000003" height="22" rx="16" fill="#819eaf" stroke="#819eaf" stroke-width="2"/>
-<text x="885" y="453" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#183447">81.28</text>
-<text x="530" y="515" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#087f8c">Filter-and-Concat</text>
-<rect x="530" y="537" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="530" y="537" width="253.09599999999998" height="22" rx="16" fill="#087f8c" stroke="#087f8c" stroke-width="2"/>
-<text x="885" y="548" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#087f8c">74.44</text>
-<text x="530" y="620" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#516779">0</text>
-<text x="870" y="620" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#516779">100</text>
-<text x="1000" y="175" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#183447">F1</text>
-<text x="1000" y="230" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Audio</text>
-<rect x="1000" y="252" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="1000" y="252" width="165.648" height="22" rx="16" fill="#819eaf" stroke="#819eaf" stroke-width="2"/>
-<text x="1355" y="263" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#183447">48.72</text>
-<text x="1000" y="325" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Video</text>
-<rect x="1000" y="347" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="1000" y="347" width="174.454" height="22" rx="16" fill="#819eaf" stroke="#819eaf" stroke-width="2"/>
-<text x="1355" y="358" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#183447">51.31</text>
-<text x="1000" y="420" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#516779">Text</text>
-<rect x="1000" y="442" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="1000" y="442" width="152.422" height="22" rx="16" fill="#819eaf" stroke="#819eaf" stroke-width="2"/>
-<text x="1355" y="453" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#183447">44.83</text>
-<text x="1000" y="515" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#087f8c">Filter-and-Concat</text>
-<rect x="1000" y="537" width="340" height="22" rx="16" fill="#edf1f4" stroke="#edf1f4" stroke-width="2"/>
-<rect x="1000" y="537" width="84.762" height="22" rx="16" fill="#087f8c" stroke="#087f8c" stroke-width="2"/>
-<text x="1355" y="548" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#087f8c">24.93</text>
-<text x="1000" y="620" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#516779">0</text>
-<text x="1340" y="620" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#516779">100</text>
-<text x="60" y="676" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183447">Fusion: highest recorded AUC (+0.81 pp over text); accuracy and F1 do not improve.</text>
-<text x="60" y="712" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#516779">Source: supplied experiment table. No new training run; uncertainty was not reported.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="590" viewBox="0 0 1440 590" role="img"><title>AUC gains from unimodal baselines to multimodal fusion</title><rect width="100%" height="100%" fill="white"/>
+<text x="60" y="55" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="39" font-weight="700" fill="#183447">From unimodal to multimodal fusion</text>
+<text x="60" y="111" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#516779">AUC only | Audio + video + text | Existing experiment results</text>
+<rect x="60" y="175" width="380" height="290" rx="16" fill="#f4f7fa" stroke="#a6bac8" stroke-width="2"/>
+<text x="250" y="219" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#183447">Audio to A/V/T</text>
+<text x="250" y="285" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="400" fill="#183447">60.10%  →  60.97%</text>
+<text x="250" y="342" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#087f8c">+0.87 pp</text>
+<text x="250" y="408" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#516779">AUC gain</text>
+<rect x="530" y="175" width="380" height="290" rx="16" fill="#f4f7fa" stroke="#a6bac8" stroke-width="2"/>
+<text x="720" y="219" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#183447">Video to A/V/T</text>
+<text x="720" y="285" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="400" fill="#183447">59.18%  →  60.97%</text>
+<text x="720" y="342" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#087f8c">+1.79 pp</text>
+<text x="720" y="408" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#516779">AUC gain</text>
+<rect x="1000" y="175" width="380" height="290" rx="16" fill="#f4f7fa" stroke="#a6bac8" stroke-width="2"/>
+<text x="1190" y="219" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#183447">Text to A/V/T</text>
+<text x="1190" y="285" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="400" fill="#183447">60.16%  →  60.97%</text>
+<text x="1190" y="342" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#087f8c">+0.81 pp</text>
+<text x="1190" y="408" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#516779">AUC gain</text>
+<text x="60" y="517" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#183447">Best unimodal baseline: Text 60.16%  →  Multimodal 60.97% (+0.81 pp)</text>
+<text x="60" y="563" dominant-baseline="central" text-anchor="start" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#516779">pp = percentage points. Source: supplied experiment table; no new training run.</text>
 </svg>
